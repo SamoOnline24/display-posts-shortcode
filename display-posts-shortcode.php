@@ -257,7 +257,7 @@ function be_display_posts_shortcode( $atts ) {
 		$image = $date = $author = $excerpt = $content = '';
 		
 		if ( $include_title )
-			$title = '<a class="title" href="' . apply_filters( 'the_permalink', get_permalink() ) . '">' . get_the_title() . '</a>';
+			$title = '<h2><a class="title" href="' . apply_filters( 'the_permalink', get_permalink() ) . '">' . get_the_title() . '</a><h2>';
 		
 		if ( $image_size && has_post_thumbnail() )  
 			$image = '<a class="image" href="' . get_permalink() . '">' . get_the_post_thumbnail( get_the_ID(), $image_size ) . '</a> ';
